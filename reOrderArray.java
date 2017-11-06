@@ -21,3 +21,21 @@ public void reOrderArray(int [] array) {
             array[i]=newArray[i];
         }
     }
+
+思路2：
+/**
+前偶后奇 交换
+**/
+public void reOrderArray(int [] array) {
+        if(array.length==0||array.length==1) return;
+        for(int i=0;i<array.length;i++){
+            for(int j=0;j<array.length-1-i;j++){
+                if(array[j]%2==0 && array[j+1]%2==1){
+                    //swap(array[j],array[j+1]);
+                    int temp=array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
