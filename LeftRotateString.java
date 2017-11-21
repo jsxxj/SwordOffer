@@ -15,3 +15,20 @@ public class Solution {
         return s2+s1;
     }
 }
+
+
+方法2
+'''
+建立两个字符串 一个保存0到n的串；一个保存n到最后的串，最后再将两个链接起来
+合成一个串。这个思路和上面截取字符串的思路是一样的！
+'''
+
+class Solution {
+public:
+    string LeftRotateString(string str, int n) {
+           string l,r;
+           for(int i=0;i<n;i++) r+=str[i];
+           for(int i=n;i<str.size();i++) l+=str[i];
+           return l+r;
+    }
+};
